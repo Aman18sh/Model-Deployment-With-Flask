@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+
+<style>  
+    /* Forms */
+    label {
+        color:rgb(234, 227, 220);
+        font-size:large;
+
+    }
+
+    input[type=text],select {
+      width: 100%;
+      padding: 8px 16px;
+      display:inline-block;
+      border: 2px solid orange;
+      box-sizing: border-box;
+      margin: 4px 0;
+      background-color: #e7dbdb;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: rgb(68, 141, 204);
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size:larger;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #e8972e;
+    }
+    
+    
+    div {
+      /* background-color: #f1f1f1; */
+      border-radius: 5px; 
+      padding: 20px 20px 18px 20px;
+      margin: 70px 400px 400px 400px;
+    }
+
+    body{
+        background-image: url("https://cdn.britannica.com/11/174711-050-9A8DDE76/Flower-Iris-Siberian-flag-Garden-Close-up.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+
+    h1 {
+        text-align: center;
+        color: #fefbfb;
+        font-size:xx-large;
+    }
+    
+    /* for image */
+    img{
+        height: 100px;
+        width: 350px;
+    }
+    /* P */
+
+    p {
+        text-align: center;
+        color: #fefbfb;
+        font-size: larger;
+    }
+
+</style>  
+
+</head>
+<body>
+
+<h1> Iris Plant Classifier </h1>
+{% if result %}
+    <p>{{result}}</p>
+{% endif %}
+
+<div>
+  <form method="post", action="/predict">
+    <label><b>sepal length (cm)</b></label><br>
+    <input type="text" name="sepal length (cm)"><br>
+    <label ><b>sepal width (cm)</b></label><br>
+    <input type="text" name="sepal width (cm)"><br>
+    <label><b>petal length (cm)</b></label><br>
+    <input type="text" name="petal length (cm)"><br>
+    <label><b>petal width (cm)</b></label><br>
+    <input type="text" name="petal width (cm)"><br>
+    <br>  
+    <input type="submit" value="Predict">
+  </form>
+</div>
+
+</body>
+</html>
